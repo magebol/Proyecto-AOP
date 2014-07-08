@@ -1,0 +1,6 @@
+Después del sismo del Lunes 7 de Julio de 2014 en Chiapas, México, al ejecutar el proyecto,
+encontré un problema con la actualización de datos en CouchDB por conflicto de objetos al utilizar
+el API Couchdb4j.
+
+Mejoré por tanto el Controller y modifiqué el código d3 que interpreta la estructura String json
+extraido del documento de la base de datos CouchDB.
