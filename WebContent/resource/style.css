@@ -1,11 +1,9 @@
 body {
-  font: 12px sans-serif;
-  bold: true;
+  font: 10px sans-serif;
 }
 
 .water {
-  fill: #a4bac9;
-  opacity: .35;
+  fill: #a4bac7;
 }
 
 .graticule {
@@ -24,14 +22,13 @@ body {
 
 .tectonic {
   fill: none;
-  stroke: #d7c7ad;
-  opacity: 0.8;
+  stroke: #000;
+  opacity: 0.5;
 }
 
 .land {
-  fill: #996633;
+  fill: #d7c7ad;
   stroke: #766951;
-    opacity: .5;
 }
 
 .borders {
@@ -41,5 +38,5 @@ body {
 
 .quake {
   fill: rgba(0,0,0,0);
-  stroke-width: 2px;
+  stroke-width: 1.5px;
 }

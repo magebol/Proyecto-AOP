@@ -74,7 +74,7 @@ d3.json('http://localhost:8080/ProyectoAOP/jsonpage', function(err, data) {
   var quakes = svg.append("g")
     .attr("class", "quakes")
       .selectAll(".quake")
-      .data(data.features.reverse())
+      .data(data.temblores.features.reverse())
     .enter().append("g")
         .attr("class", "quake")
         .attr("transform", function(d) {

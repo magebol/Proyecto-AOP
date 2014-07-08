@@ -9,17 +9,20 @@ public class ProyectoAspecto {
 	  
 	@Before("execution(public * edu.itesm.mx.aop.mvc.ProyectoController.abrirProyecto())")
 	public void beforeAdvice1() {
-		System.out.println("Before Controller - Abriendo index.jsp. Cargando temblores...");
+		System.out.println("Advice Before Controller - Abriendo proyecto.jsp, Cargando temblores y guardando en CouchDB...");
 	}
-	
+	@After("execution(public * edu.itesm.mx.aop.mvc.ProyectoController.abrirProyecto())")
+	public void afterAdvice1() {
+		System.out.println("Advice After Controller - Datos actualizados en CouchDB...");
+	}
+
 	@Before("execution(public * edu.itesm.mx.aop.mvc.ProyectoController.jsonpage())")
-	public void beforeAdvice2() {
-		System.out.println("Advice Before, Controller - Pasando json a javascript...");
-	}
-	
-	@After("execution(public * edu.itesm.mx.aop.mvc.ProyectoController.jsonpage())")
 	public void beforeAdvice3() {
-		System.out.println("Advice After, Controller - json entregado a d3 en app.js");
+		System.out.println("Advice Before, Controller - Tomando datos de CouchdDB...");
+	}
+	@After("execution(public * edu.itesm.mx.aop.mvc.ProyectoController.jsonpage())")
+	public void afterAdvice3() {
+		System.out.println("Advice After, Controller - String Json entregado.");
 	}
 	
 }
